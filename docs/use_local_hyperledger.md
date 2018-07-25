@@ -25,11 +25,19 @@ git clone https://github.com/hyperledger/fabric-samples.git
 cd fabric-samples
 ```
 
+
 Once you have cloned the repository start downloading the docker images of the various fabric components.
 
+REF: http://hyperledger-fabric.readthedocs.io/en/latest/install.html
+
 ```bash
-curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/release-1.1/scripts/bootstrap-1.1.0-preview.sh -o setup_script.sh
-sudo bash setup_script.sh
+curl -sSL http://bit.ly/2ysbOFE | bash -s 1.2.0
+```
+If you want to download Fabric, Fabric-ca and thirdparty Docker images you must pass the version identifier to the script.
+
+```bash
+curl -sSL http://bit.ly/2ysbOFE | bash -s <fabric> <fabric-ca> <thirdparty>
+curl -sSL http://bit.ly/2ysbOFE | bash -s 1.2.0 1.2.0 0.4.10
 ```
 
 Be sure to add these binaries to your PATH variable by running the following command or pasting it into you .profile file.
